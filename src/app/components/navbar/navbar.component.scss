@@ -1,0 +1,47 @@
+.header {
+    nav {
+        img {
+            width: 100px;
+            margin-right: 100px;
+        }
+        .infoUser {
+            text-align: center;
+            margin-left: auto;
+            justify-content: center;
+            color: #fff;
+            img {
+                width: 50px;
+                display: flex;
+                margin: auto;
+            }
+            p {
+                margin-bottom: 0px;
+                display: block;
+            }
+        }
+    }
+    .webFound {
+        height: 100vh;
+        display: flex;
+        margin: auto;
+    }
+}
+
+.navbar-nav .active {
+    background-color: #575757;
+    border-radius: 10px 10px 0px 0px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        nav {
+            img {
+                width: auto;
+                margin-right: 100px;
+            }
+            .infoUser {
+                display: none;
+            }
+        }
+    }
+}

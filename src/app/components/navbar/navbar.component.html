@@ -1,0 +1,30 @@
+<div [ngSwitch]="rolUser" class="header">
+    <nav *ngSwitchCase="'administrador'" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <img src="/assets/Logo-SmartQuick-Blanco.png" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+            <div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/dashboard/home">Home</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/dashboard/listar">Listar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="infoUser">
+            <!-- <img src="/assets/avatar.png" alt=""> -->
+            <p><strong>{{nameUser}}</strong></p>
+            <p>{{rolUser}}</p>
+        </div>
+    </nav>
+    <div *ngSwitchCase="'coordinador'">
+        <img class="webFound" src="/assets/construccion.png" alt="">
+    </div>
+</div>
