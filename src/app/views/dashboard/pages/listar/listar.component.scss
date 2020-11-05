@@ -1,0 +1,41 @@
+.center {
+    width: 70vw;
+    display: flex;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    // height: 100vh;
+    .content {
+        width: 100%;
+        justify-content: center;
+        .medallas {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            table.table {
+                thead {
+                    color: #f1f3f2;
+                    background-color: #585a56;
+                    tr {
+                        th {
+                            vertical-align: middle;
+                            img {
+                                height: 100px;
+                                max-height: 100px;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    background-color: #81a3a7;
+                    color: white;
+                    tr {
+                        td {
+                            vertical-align: middle;
+                            height: 100px;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -12,6 +11,8 @@ export class HomeComponent implements OnInit {
   constructor( private servicios: HttpService ) { }
 
   public data: any;
+  public dataTable: any;
+
   ngOnInit(): void {
     this.listar();
   }
@@ -20,6 +21,20 @@ export class HomeComponent implements OnInit {
     this.servicios.dataList().subscribe((result: any) => {
       const dataParse = JSON.parse(result);
       this.data = dataParse;
+      this.viewData(this.data);
     });
+  }
+
+  viewData(data: any){
+    this.dataTable = data.slice(0 , 6);
+  }
+  previous(){
+    this.dataTable = [];
+    this.dataTable = this.data.slice(0 , 6);
+
+  }
+  next(){
+    this.dataTable = [];
+    this.dataTable = this.data.slice(6 , 12);
   }
 }
